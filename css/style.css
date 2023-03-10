@@ -1,0 +1,1355 @@
+/****** for site *******/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    line-height: 1 !important;
+}
+
+/**** up to top*/
+.up {
+    position: fixed;
+    bottom: 4px;
+    right: 20px;
+    background-color: rgb(218, 130, 7);
+    color: #eee;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 44px;
+    padding: 9px 17px;
+    z-index: 40000;
+    border-radius: 50%;
+    display: none;
+}
+
+.load
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 3500;
+    visibility: visible;
+}
+.load img
+{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+}
+.load h2
+{
+    position: absolute;
+    left: 51%;
+    top: 49%;
+    font-style: italic;
+    transform: translate(-50%,-50%);
+    font-weight: bolder;
+    font-size: 32px;
+    color: #534e4e;
+}
+
+
+/*setting*/
+
+.setting 
+{
+    position: fixed;
+    top: 173px;
+    left: -250px;
+    background-color: rgba(0, 0, 0, .8);
+    height: auto;
+    width: 250px;
+    z-index: 50000;
+    transition: all .8s ease-in-out;
+    border-radius: 10px;
+}
+.setting-icon {
+    text-align: center;
+    position: absolute;
+    right: -40px;
+    background-color: rgb(218, 130, 7);
+    color: #FFF;
+    top: 35px;
+    border: 2px solid #ccc;
+    line-height: 1.6;
+    width: 40px;
+    font-weight: 900;
+    font-size: 20px;
+    cursor: pointer;
+}
+.option-box {
+    padding: 30px 10px;
+}
+
+.h4-setting {
+    margin-bottom: 20px;
+    color:#eee;
+    border-bottom: 1px solid #ccc;
+    line-height: 1.5;
+    font-size: 28px;
+    font-weight: bold;
+}
+.back-option
+{
+    margin: auto;
+    width:80%;
+}
+.back-option span{
+    display: inline-block;
+    background-color: rgb(218, 130, 7);
+    color: #fff;
+    cursor: pointer;
+    opacity: .5;
+    border-radius: 6px;
+    padding: 8px 15px;
+
+}
+.setting.open {
+    left: 0;
+}
+.back-option span.active2{
+    opacity: 1;
+    border: 2px solid #ccc;
+}
+/**************** nav*****************/
+.site .navv {
+    background-color: rgb(42, 44, 46);
+    display: flex;
+    top:22px;
+    left: 0;
+    right: 0;
+    z-index:50000;
+    padding: 27px 160px;
+    position: absolute;
+}
+
+.site .navv.scrollnave
+{
+    position: fixed;
+    top: 0;
+}
+
+
+.navv::before
+{
+    position: absolute;
+    content: url(../images/logo.png);
+    top: -22px;
+    background: url(../images/lo_be.png);
+    width: 500px;
+    height: 200px;
+    left: 0;
+    background-repeat: no-repeat;
+    padding-left: 8px;
+    padding-top: 14px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.site .navcontent {
+    display: flex;
+    justify-content: space-between;
+    width: 94%;
+    align-items: center;
+}
+
+.footer .footlogo h1 {
+    display: inline-block;
+    font-size: 30px;
+    font-family: 'Emilys Candy', cursive;
+    font-style: italic;
+}
+
+.site .navv .logo h1 span,
+.site .banner .img .bannercontent h1 span,
+.activenav,
+.man-cont h1 span,
+.products h1 span,
+.footer .footlogo h1 span,
+.footer .contact-links li a:hover {
+    color: rgb(218 130 7) !important;
+}
+
+
+
+.site .navv .links ul,
+.register .contact-links {
+    list-style: none;
+    margin-bottom: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.site .navv .links ul li {
+    display: inline-block;
+    font-size: 21px;
+    margin-right: 60px;
+    font-family: 'Gorditas', cursive;
+    font-weight: bold;
+}
+
+.site .navv .links ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.site .navv .links ul li a:hover {
+    color: rgb(218 130 7);
+    border-bottom: 1px solid rgb(218 130 7);
+}
+
+.site .navv .button {
+    background-color: #fff;
+    width: 40px;
+    border-radius: 6px;
+    padding: 10px 3px;
+    cursor: pointer;
+    display: none;
+}
+
+.site .navv .button span {
+    background-color: #979595;
+    height: 2px;
+    width: 100%;
+    display: block;
+    margin-bottom: 4px;
+}
+
+#navlinks.activelinks {
+    display: block;
+    transition: all 0.6s ease-in-out;
+}
+.navv h1 
+{
+    color: #eee;
+    font-family: 'Emilys Candy', cursive;
+    display: none;
+}
+@media (max-width : 1190px) {
+    .site .navv {
+        padding: 27px 34px;
+    }
+
+    .banner .bannercontent {
+        left: 41%;
+    }
+
+    .buttons {
+        padding: 0 24px;
+        
+    }
+}
+
+@media (max-width : 768px) {
+    .navv::before
+    {
+        display: none;
+    }
+    .navv h1 
+    {
+        display: block;
+    }
+
+    .site .navv {
+        padding: 6px 30px;
+    }
+
+    .site .logo h1 {
+        padding-top: 6px;
+        font-size: 45px;
+    }
+
+    .site .navv .links ul {
+        display: none;
+        padding: 20px 0px;
+        border-top: 2px solid #ccc;
+    }
+
+    .site .navv .button {
+        display: inline-block;
+        margin-bottom: 22px;
+        margin-left: auto;
+        margin-top: 13px;
+    }
+
+    .site .navv .logo {
+        display: flex;
+        justify-content: space-between;
+        width: 90%
+    }
+
+    .site .navv .links ul li {
+        display: block;
+        margin-bottom: 6px;
+    }
+
+    .site .navcontent {
+        display: block;
+    }
+}
+
+/******************Nav ************************/
+
+/***********footer*******/
+.footer {
+    background-color: rgb(24, 24, 26);
+    width: 100%;
+    color: #eee;
+    padding: 30px 0;
+}
+
+.footer .footcontent {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer h2 {
+    font-size: 35px;
+    font-style: italic;
+    font-family: 'FontAwesome';
+}
+
+.footer .contact-links li {
+    display: inline-block;
+    padding: 5px 5px;
+    font-size: 36px;
+}
+
+.footer .contact-links li a {
+    color: #eee;
+    transition: all 0.4s ease-in-out;
+}
+
+.footer p {
+    text-align: center;
+}
+
+.footer p span {
+    color: rgb(218 130 7);
+    font-weight: bold;
+    font-style: italic;
+}
+
+@media (max-width : 768px)
+{
+    .footer .footcontent {
+        display: block; 
+        width: 90%;
+    }
+    .footer {
+        padding: 31px 20px 64px;
+    }
+}
+/***********footer*******/
+
+
+/****** for site *******/
+
+
+
+/****** home Page *****/
+.banner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+}
+
+.banner .img {
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner .img.active {
+    opacity: 1;
+    transition: all 0.5s ease-in-out
+}
+
+.buttons {
+    position: absolute;
+    top: 46%;
+    transform: translateY(-50%);
+    z-index: 1001;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: #fff;
+    padding: 0 46px;
+}
+
+.buttons div {
+    cursor: pointer;
+    background-color: rgb(218, 130, 7);
+    padding: 9px 12px;
+    font-size: 26px;
+    border-radius: 50%;
+}
+
+.banner .bannercontent {
+    position: absolute;
+    top: 50%;
+    left: 434px;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    padding: 42px 10px;
+    box-shadow: 4px 4px 10px #7a7575, -4px -4px 10px #7a7575;
+    border-radius: 6px;
+    z-index: 11;
+    width: 478px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #eee;
+}
+
+.banner .bannercontent h1 {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.banner .bannercontent p {
+    font-size: 19px;
+    font-style: italic;
+    color: rgb(226 195 195);
+    line-height: 1.3;
+}
+
+
+
+@media (max-width : 768px) {
+    .buttons {
+        padding: 0 30px;
+    }
+
+    .banner .bannercontent {
+        left: 49%;
+        padding: 16px 10px;
+        width: 70%;
+    }
+
+}
+
+@media (max-width : 470px) {
+    .banner .bannercontent {
+        left: 50%;
+    }
+
+    .buttons {
+        padding: 0 6px;
+    }
+
+    .card1 .cardcontent .btncheckout {
+        left: 29px;
+        top: 450px;
+    }
+}
+
+/**** Gallary***/
+.man-cont {
+    margin: auto;
+    width: 100%;
+    height: 79vh;
+    background-color: #eee;
+    position: relative;
+}
+
+.man-cont h1 {
+    position: absolute;
+    font-size: 50px;
+    color: rgb(42, 44, 46);
+    font-family: 'Emilys Candy', cursive;
+    left: 25%;
+    top: 5%;
+    font-style: italic;
+    border-bottom: 2px solid rgb(42, 44, 46);
+}
+
+.man-cont .man-img {
+    width: 25%;
+    position: absolute;
+    right: 0%;
+    height: 79vh;
+}
+
+.man-cont .man-img img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.man-cont .man-slider-cont {
+    width: 40%;
+    height: inherit;
+    position: relative;
+    margin-left: 13%;
+    overflow: hidden;
+}
+
+.man-cont .man-slider-cont .man-slider {
+    position: absolute;
+    top: 30%;
+    width: 4800px;
+    height: 300px;
+    animation: man-slide infinite 30s linear none normal;
+}
+
+.man-cont .man-slider-cont .man-slider img {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+@keyframes man-slide {
+
+    0%,
+    100% {
+        left: 0;
+    }
+
+    25% {
+        left: -600px;
+    }
+
+    50% {
+        left: -1200px;
+    }
+
+    75% {
+        left: -600px;
+    }
+
+}
+
+
+@media (max-width : 550px) {
+    .man-cont .man-slider-cont .man-slider {
+        top: 58%;
+    }
+
+    .man-cont .man-img {
+        width: 84%;
+        right: 8%;
+        height: 36vh;
+        top: 16%;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+
+    .man-cont .man-slider-cont {
+        width: 76%;
+        margin-left: 13%;
+    }
+
+    .man-cont h1 {
+        font-size: 30px;
+        left: 31%;
+        top: 5%;
+    }
+
+    .man-cont {
+        height: 94vh
+    }
+}
+
+/**** Gallary***/
+
+
+/**** offer ***/
+.site .offer {
+    display: flex;
+    padding: 20px 0;
+    background-color: rgb(42, 44, 46);
+    color: #eee;
+    justify-content: space-around;
+}
+
+.site .offer .offer_desc {
+    padding-top: 50px;
+}
+
+.site .offer .offer_desc h1 {
+    font-size: 50px;
+    font-family: cursive;
+}
+
+.site .offer .offer_desc .p-desc {
+    font-size: 17px;
+    padding: 15px;
+    width: 486px;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #8d8b8b;
+}
+
+.site .offer .offer_desc h2 {
+    text-align: center;
+    box-shadow: 0px 0px 5px rgb(218 130 7),
+        0px 0px 9px rgb(218 130 7);
+    width: 250px;
+    margin: 21px auto;
+    padding: 10px 0;
+    font-weight: 900;
+    font-style: italic;
+    font-family: 'Emilys Candy', cursive;
+    border-radius: 6px;
+}
+
+
+.site .offer .offerimg {
+    text-align: right;
+    padding-top: 70px;
+}
+
+.site .offer .offerimg img {
+    width: 450px;
+    height: 250px;
+    border-radius: 10px;
+
+}
+
+@media (max-width : 992px) {
+
+    .site .offer .offer_desc {
+        width: 50%;
+    }
+
+    .site .offer .offer_desc h1 {
+        font-size: 32px;
+    }
+
+    .site .offer .offer_desc .p-desc {
+        width: 100%;
+    }
+
+    .site .offer .offerimg img {
+        width: 329px;
+    }
+}
+
+@media (max-width : 668px) {
+
+    .site .offer {
+        display: block;
+        padding: 20px 15px;
+    }
+
+    .site .offer .offer_desc {
+        width: 95%;
+        text-align: center;
+    }
+
+    .site .offer .offer_desc h1 {
+        font-size: 32px;
+    }
+
+    .site .offer .offer_desc .p-desc {
+        width: 100%;
+    }
+
+    .site .offer .offerimg {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .site .offer .offerimg img {
+        width: 461px;
+    }
+}
+
+@media (max-width : 508px) {
+
+    .site .offer {
+        display: block;
+        padding: 20px 15px;
+    }
+
+    .site .offer .offer_desc {
+        width: 95%;
+        text-align: center;
+    }
+
+    .site .offer .offer_desc h1 {
+        font-size: 32px;
+    }
+
+    .site .offer .offer_desc .p-desc {
+        width: 100%;
+    }
+
+    .site .offer .offerimg {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .site .offer .offerimg img {
+        width: 261px;
+    }
+}
+
+
+/******coundown*******/
+.count {
+    display: flex;
+    width: 271px;
+    background-color: #eee;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 22px;
+    margin: 20px auto;
+}
+
+.count div {
+    width: 60px;
+}
+
+.count .item span {
+    color: rgb(218 130 7);
+}
+
+.count .item p {
+    color: rgb(42, 44, 46);
+}
+
+/**************countdown**********/
+
+/**** offer ***/
+
+
+/********* product **********/
+
+.products {
+    padding: 50px 10%;
+    background-color: #eee;
+}
+
+.products h1 {
+    text-align: center;
+    padding: 10px 0 50px 0;
+    font-size: 54px;
+    text-shadow: 2px 2px 7px #333;
+    font-style: italic;
+    font-family: 'Emilys Candy', cursive;
+    ;
+}
+
+.products ul {
+    margin-bottom: 20px;
+}
+
+.products ul li {
+    display: inline-block;
+    padding: 1%;
+    margin-right: .5%;
+    cursor: pointer;
+    font-family: 'Lobster', cursive;
+    transition: .6s;
+}
+
+.products ul li.selected {
+    border-bottom: 2px solid rgb(218 130 7);
+    border-top: 2px solid rgb(218 130 7);
+
+}
+
+.products ul li:hover {
+    border-bottom: 1px solid rgb(218 130 7);
+    border-top: 1px solid rgb(218 130 7);
+}
+
+.card {
+    margin-left: 40%;
+    color: rgb(218 130 7);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+.price {
+    font-weight: bold;
+    font-family: 'Emilys Candy', cursive;
+
+}
+
+.value {
+    font-weight: bold;
+    background-color: #343a40;
+    color: #fff;
+    padding: 0 2%;
+
+}
+
+.products .prodesc {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.single-item {
+    display: inline-block;
+    width: 23%;
+    position: relative;
+    margin: .5%;
+}
+
+.single-item:hover .over {
+    display: block;
+}
+
+.img-pro img {
+    width: 100%;
+    height: 40vh;
+    transition: .3s;
+    filter: drop-shadow(8px 8px 10px #000);
+}
+
+.img-pro:hover img {
+    transform: scale(1.1);
+}
+
+.img-pro {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6%;
+}
+
+.over {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    display: none;
+}
+
+.over span {
+    color: #000;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    display: block;
+    background-color: #fff;
+    padding: 3% 4%;
+    border-radius: 15px;
+    line-height: 1;
+    text-align: center;
+    font-family: 'Emilys Candy', cursive;
+    cursor: pointer;
+    transition: .6s;
+}
+
+.over span:hover {
+    color: #fff;
+    background-color: rgb(218 130 7);
+}
+
+.name {
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0 5px 20px;
+    display: inline-block;
+    font-style: italic;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .7);
+    padding: .8% 6%;
+    border-radius: 8px;
+
+}
+
+.hide {
+    display: none;
+    transition: all 1s ease-out;
+}
+
+/* Responsive CSS */
+
+@media (max-width: 575.98px) {
+    .single-item {
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .single-item {
+        width: 47%;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .single-item {
+        width: 31.33%;
+    }
+
+}
+
+/********* product **********/
+
+
+/**************Card ***************/
+.card1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 30000;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.card1 .cardcontent {
+    background-color: #fff;
+    width: 87%;
+    margin: 100px auto;
+    padding:10px 10px 70px 10px;
+    height: 600px;
+    overflow-y: scroll;
+    position: relative;
+    border-radius: 20px;
+}
+
+.card1 .cardcontent img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+}
+
+.card1 .cardcontent .cardpro {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e2e0e0;
+    padding-bottom: 10px;
+}
+
+.card1 .cardcontent p,
+.card1 .cardcontent .quntatiy {
+    line-height: 5.5;
+}
+
+.card1 .cardcontent .quntatiy span {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.card1 .cardcontent button {
+    padding: 10px 20px;
+    height: 40px;
+    margin-top: 25px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    color: #eee;
+
+}
+
+.card1 .cardcontent .btndelpro {
+    background-color: rgb(181, 6, 6);
+    font-size: 15px;
+
+}
+
+.card1 .cardcontent .btncheckout {
+    position: fixed;
+    right: 115px;
+    background-color: rgb(218 130 7);
+    font-size: 18px;
+    bottom: 60px;
+}
+
+.card1 .cardcontent .totalprice {
+    position: fixed;
+    left: 226px;
+    bottom: 65px;
+    font-size: 19px;
+    font-weight: bolder;
+}
+
+.card1 .cardcontent .totaltext {
+    position: fixed;
+    left: 114px;
+    bottom: 64px;
+    font-size: 19px;
+    font-weight: bolder;
+    background-color: rgb(218, 130, 7);
+    color: #eee;
+    padding: 3px;
+    border-radius: 6px;
+}
+
+.card1 .cardcontent .plus,
+.card1 .cardcontent .muins {
+    cursor: pointer;
+}
+
+.card1 .cardcontent h1 {
+    text-align: center;
+    font-size: 37px;
+    font-family: 'Emilys Candy';
+    font-style: italic;
+    text-shadow: 2px 2px 8px rgb(218, 130, 7);
+}
+.swal2-popup .swal2-styled.swal2-confirm {
+    border: 0;
+    border-radius: 0.25em;
+    background: initial;
+    background-color: rgb(218, 130, 7) !important;
+    color: #fff;
+    font-size: 1.0625em;
+}
+
+/**************Card ***************/
+
+/***************Home Page  ****************/
+
+
+
+
+/********About page **********/
+.aboutbanner {
+    background-image: url(../images/about.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.aboutbanner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #eee;
+    font-size: 80px;
+    font-weight: 800;
+    font-family: cursive;
+    font-style: italic;
+    text-shadow: 4px 4px 10px #000;
+}
+
+.Ourstory {
+    padding: 4% 6%;
+    display: flex;
+    margin: 20px 0 50px 0;
+
+}
+
+.our-story {
+    width: 800px;
+    padding-right: 40px;
+}
+
+.Ourstory h3 {
+
+    font-size: 46px;
+    color: #343a40;
+    position: relative;
+    padding: 2% 0;
+}
+
+.Ourstory h3::after {
+    content: "";
+    width: 13%;
+    background-color: #343a40;
+    position: absolute;
+    height: .3vh;
+    bottom: 3%;
+    left: .8%;
+}
+
+.Ourstory p {
+    font-size: 18px;
+    color: rgb(141, 139, 139);
+    line-height: 1.9;
+    padding: 0 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+.Ourstory .img {
+    border: 3px solid #ccc;
+    width: 46%;
+    height: 521px;
+    position: relative;
+}
+
+.Ourstory .img img {
+    width: 100%;
+    height: 69vh;
+    position: absolute;
+    right: 4%;
+    top: 4%;
+    transition: .6s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.Ourstory .img img:hover {
+    right: 0%;
+    top: 0%;
+    transform: scale(.95);
+}
+
+/********* subscribe********/
+.subscribe
+{
+    background-color: #f7f6f2;
+    width: 100%;
+    height: 200px;
+    margin: 40px 0 0 0 ;
+    padding: 50px 0 0 0;
+}
+.subscribe .describion-sub
+{
+    align-items: center;
+}
+.subscribe .dec-sub p 
+{
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: gray;
+}
+
+.subscribe .describion-sub .sub-form .btn
+{
+    position: absolute;
+    right: 13px;
+    bottom: 1px;
+    background-color: rgb(218, 130, 7);
+    border: 1px solid rgb(218, 130, 7);
+    font-weight: 600;
+}
+
+
+@media (max-width : 992px) {
+
+    .Ourstory p {
+        font-size: 12px;
+    }
+    .Ourstory .img 
+    {
+        width: 94%;
+        height: 397px;
+    }
+    .Ourstory .img img {
+        width: 100%;
+        height: 391px;
+    }
+
+}
+
+@media (max-width : 768px) {
+
+    .Ourstory
+    {
+        display: block;
+    }
+    .Ourstory h3 {
+        font-size: 9.5vw;
+    }
+
+    .our-story {
+        width: 800px;
+        text-align: left;
+        padding-right: 0px;
+    }
+
+    .our-story {
+        width: 100%;
+    }
+
+    .Ourstory p {
+        font-size: 18px;
+    }
+    .Ourstory .img 
+    {
+        margin: auto;
+        width: 90%;
+    }
+    .Ourstory h3::after {
+        left: 3%;
+        width: 29%;
+    }
+
+    .Ourstory .img img {
+        width: 100%;
+        height: 50vh;
+        margin-bottom: 6%;
+    }
+    .subscribe 
+    {
+        height: auto; 
+        margin: 40px 0 0 0;
+        padding: 50px 0 50px 0;
+    }
+
+
+}
+
+
+
+/********About page **********/
+
+
+
+/************contact **********/
+.contactbanner {
+    background-image: url(../images/contact.avif);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.contactbanner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #eee;
+    font-size: 60px;
+    font-weight: 800;
+    font-family: cursive;
+    font-style: italic;
+    text-shadow: 4px 4px 10px #000;
+}
+
+.register {
+    /*padding: 40px 0px 70px 300px;*/
+    background-color: #fbf5f5;
+}
+
+
+.register form
+{
+    width: 100%;
+}
+.register .form
+{
+   padding: 200px 0 50px 50px;
+}
+.register .form-check-inline {
+    padding-left: 16px;
+}
+.contactimg
+{
+    background-image: url(../images/premium_photo-1664202526559-e21e9c0fb46a.avif);
+    height: 720px;
+}
+
+#submit {
+    background-color: rgb(218 130 7);
+    border: 1px solid #ccc;
+    padding: 5px 25px;
+    color: #eee;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: cursive;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    font-family: cursive;
+    font-style: italic;
+}
+
+#submit:hover {
+    color: rgb(218 130 7);
+    background-color: #eee;
+    border: 2px solid rgb(218 130 7);
+}
+
+.register input[type="text"]:focus,
+.register input[type="password"]:focus {
+    border-color: rgb(216, 154, 68);
+    box-shadow: 0 1px 1px rgb(218 130 7) inset, 0 0 4px rgb(218 130 7);
+    outline: 0 none;
+}
+
+.register textarea {
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 46%;
+    margin-left: 16px;
+    margin-bottom: 20px;
+}
+
+.register label {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: inherit;
+    font-style: italic;
+    color: #5f5f5f;
+}
+
+.register .btnsub {
+    text-align: right;
+}
+
+@media (max-width : 1424px)
+{
+    .contactimg {
+        height: 776px;
+    }
+}
+@media (max-width : 768px)
+{
+    .register .row 
+    {
+        margin: 0;
+    }
+    .register .form {
+        padding: 20px 0 50px 0px;
+    }
+    .container-fluid{
+        padding-right: 0px; 
+        padding-left: 0px;
+    }
+    .contactimg {
+        height: 538px;
+    }
+    .register textarea {
+        width: 93%;
+    }
+    
+}
+
+
+/************contact **********/
